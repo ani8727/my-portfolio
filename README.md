@@ -1,5 +1,25 @@
 # Aniket's Portfolio
 
+<div align="center">
+
+## 🌐 Live Preview
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://ani8727.github.io/my-portfolio/)
+
+**[👉 Click Here to View Live Portfolio 👈](https://ani8727.github.io/my-portfolio/)**
+
+---
+
+### Quick Links
+
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue?style=flat&logo=github)](https://github.com/ani8727/my-portfolio)
+[![Build Status](https://img.shields.io/badge/Build-Passing-success?style=flat)](https://github.com/ani8727/my-portfolio/actions)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)](LICENSE)
+
+</div>
+
+---
+
 A modern, responsive portfolio website showcasing projects and skills as a Full Stack Developer specializing in Java backend, Spring Boot, cloud-native services, and Data Structures & Algorithms.
 
 ## 🚀 Features
@@ -19,15 +39,7 @@ A modern, responsive portfolio website showcasing projects and skills as a Full 
 - **Email Service**: EmailJS
 - **Image Processing**: Jimp
 - **Code Quality**: ESLint
-
-## Quick Links
-
-- Repository: [ani8727/my-portfolio](https://github.com/ani8727/my-portfolio)
-- Live site: (add your deployed URL here)
-
-**Preview:** (update this URL after you deploy)
-
-`https://your-deployed-site.com`  ← Replace with your live preview URL after deployment
+- **Deployment**: GitHub Pages with GitHub Actions
 
 ---
 

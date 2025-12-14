@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { AiOutlineDownload } from "react-icons/ai";
+import { AiOutlineDownload, AiOutlineEye } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import Particle from "../components/Particle";
 import pdf from "../assets/resume.pdf";
@@ -82,17 +82,24 @@ const Resume = () => {
         </div>
       </div>
 
-      {/* Download Button Top */}
-      <div className="flex justify-center mb-12 relative z-10">
+      {/* Preview and Download Buttons */}
+      <div className="flex justify-center gap-4 flex-wrap mb-12 relative z-10 px-4">
         <a
           href={pdf}
           target="_blank"
           rel="noreferrer"
+          className="inline-flex items-center bg-linear-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50 hover:shadow-2xl transform hover:scale-105"
+        >
+          <AiOutlineEye className="mr-3 text-lg" />
+          Preview Resume
+        </a>
+        <a
+          href={pdf}
           download="Aniket_Gupta_Resume.pdf"
-          className="inline-flex items-center bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 hover:shadow-2xl transform hover:scale-105"
+          className="inline-flex items-center bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 hover:shadow-2xl transform hover:scale-105"
         >
           <AiOutlineDownload className="mr-3 text-lg" />
-          Download Full Resume
+          Download Resume
         </a>
       </div>
 
@@ -154,17 +161,24 @@ const Resume = () => {
         </div>
       </div>
 
-      {/* Download Button Bottom */}
-      <div className="flex justify-center relative z-10 mb-8">
+      {/* Preview and Download Buttons Bottom */}
+      <div className="flex justify-center gap-4 flex-wrap relative z-10 mb-8 px-4">
         <a
           href={pdf}
           target="_blank"
           rel="noreferrer"
+          className="inline-flex items-center bg-linear-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50 hover:shadow-2xl transform hover:scale-105"
+        >
+          <AiOutlineEye className="mr-3 text-lg" />
+          Preview Resume
+        </a>
+        <a
+          href={pdf}
           download="Aniket_Gupta_Resume.pdf"
-          className="inline-flex items-center bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 hover:shadow-2xl transform hover:scale-105"
+          className="inline-flex items-center bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 hover:shadow-2xl transform hover:scale-105"
         >
           <AiOutlineDownload className="mr-3 text-lg" />
-          Download Full Resume
+          Download Resume
         </a>
       </div>
     </section>

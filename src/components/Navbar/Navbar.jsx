@@ -49,32 +49,52 @@ const NavBar = () => {
           <div className="flex md:hidden">
             <button
               onClick={() => setNavOpen(!navOpen)}
-              className={`focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded`}
+              className={`focus:outline-none focus:ring-2 focus:ring-yellow-400 rounded p-2`}
               aria-label={navOpen ? "Close menu" : "Open menu"}
             >
-              <div className="space-y-1">
-                <span className={`block w-6 h-0.5 bg-white`}></span>
-                <span className={`block w-6 h-0.5 bg-white`}></span>
-                <span className={`block w-6 h-0.5 bg-white`}></span>
+              <div className="space-y-1.5">
+                <span className={`block w-7 h-0.5 bg-white transition-all duration-300 ${navOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                <span className={`block w-7 h-0.5 bg-white transition-all duration-300 ${navOpen ? 'opacity-0' : ''}`}></span>
+                <span className={`block w-7 h-0.5 bg-white transition-all duration-300 ${navOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
               </div>
             </button>
           </div>
-
-          {/* Desktop & Mobile menu items */}
-          <div className={`md:flex md:items-center md:space-x-6 ${navOpen ? "block" : "hidden"} w-full md:w-auto`}>
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`block md:inline-block ${linkTextClass} px-3 py-2 rounded-md font-medium ${
-                  location.pathname === item.path ? "text-yellow-400" : ""
-                }`}
-              >
-                {item.icon} {item.label}
-              </Link>
-            ))}
-          </div>
         </div>
+      </div>
+
+      {/* Mobile menu items - separate from desktop */}
+      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+        navOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+      }`}>
+        <div className="px-4 pb-4 space-y-2 bg-indigo-900/98">
+          {navItems.map((item) => (
+            <Link
+              key={item.path}
+              to={item.path}
+              onClick={() => setNavOpen(false)}
+              className={`block ${linkTextClass} px-4 py-3 rounded-md font-medium transition-all ${
+                location.pathname === item.path ? "text-yellow-400 bg-indigo-800/50" : "hover:bg-indigo-800/30"
+              }`}
+            >
+              {item.icon} {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop menu items */}
+      <div className="hidden md:flex md:items-center md:justify-end md:space-x-6 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 h-16">
+        {navItems.map((item) => (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={`inline-block ${linkTextClass} px-3 py-2 rounded-md font-medium ${
+              location.pathname === item.path ? "text-yellow-400" : ""
+            }`}
+          >
+            {item.icon} {item.label}
+          </Link>
+        ))}
       </div>
     </nav>
   );

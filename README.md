@@ -4,9 +4,9 @@
 
 ## 🌐 Live Preview
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://ani8727.github.io/my-portfolio/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Visit%20Site-brightgreen?style=for-the-badge&logo=vercel)](https://ani8727.github.io/aniket/)
 
-**[👉 Click Here to View Live Portfolio 👈](https://ani8727.github.io/my-portfolio/)**
+**[👉 Click Here to View Live Portfolio 👈](https://ani8727.github.io/aniket/)**
 
 ---
 
